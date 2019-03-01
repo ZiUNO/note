@@ -1,8 +1,8 @@
 # LateX
-###### Atom (Ctrl+Alt+B)
-###### 推荐学习链接:
+## Atom (Ctrl+Alt+B)
+## 推荐学习链接:
 > https://liam.page/2014/09/08/latex-introduction/
-## Hello, LateX! (英文)
+## Hello, LateX!(英文)
 ```
 \documentclass{article}
 % 这里是导言区(对整篇文档进行设置)
@@ -10,7 +10,7 @@
 Hello, LateX!
 \end{document}
 ```
-## 你好, LateX! (中英混编)
+## 你好, LateX!(中英混编)
 ```
 \documentclass[UTF8]{ctexart}
 \begin{document}
@@ -24,6 +24,7 @@ Hello, LateX!
 \author{作者}
 \date{时间}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \begin{document}
 \maketitle
 \tableofcontents
@@ -36,30 +37,49 @@ Hello, LateX!
 \subparagraph{亚段落}
 亚段落内容
 
-添加行内公式:$inline$
+行内公式:$inline$
 
-添加行间公式:
+行间公式:
 
 \[display\]
 
 \begin{equation}
 display with number
 \end{equation}
+
+图片:
+
+\includegraphics{test.jpg}
+
+图片(压缩至页面宽度的80\%)
+
+\includegraphics[width = .8\textwidth]{test.jpg}
+
+表格:
+
+\begin{tabular}{|l|c|r|}
+  \hline
+  居左l& 居中c& 居右r\\
+  \hline
+  -& -& -\\
+  \hline
+\end{tabular}
 \end{document}
 ```
 ## 语法
-### 控制序列(全局)
 
+### 控制序列(全局)
 | `\`(开头)  | `控制序列` | `{ }` | `{成分名}` | 功能 |
 |:---:|:---:|:---:|:---:|:---:|
 | `\` | `documentclass` | `{article}` | `{参数}` | 调用名为`article`的文档类 |
-| `\` | `date` | `{time}` | `{时间}` | 设置时间 **时间:自定义 或 `\today`** |
-| `\` | `usepackage` | `{amsmath}` | `{宏包}` | 加载名为`amsmath`的宏包**(用于插入数学公式)** |
-| `\` | `begin` +  `end` | `{document}` `{equation}` | `{环境名}` | 在`环境名`环境中的内容被正常的输出到文档中**(document环境中可输出到文档中,equation环境中可对行间公式进行编号)** |
+| `\` | `date` | `{time}` | `{时间}` | 设置时间 ** 时间:自定义 或 `\today` ** |
+| `\` | `usepackage` | `{amsmath}` `{graphicx}`  | `{宏包名}` | 加载指定宏包** (amsmath用于插入数学公式,graphicx用于插入图片) **  |
+| `\` | `begin` +  `end` | `{document}` `{equation}` `{tabular}` | `{环境名}` | 在`环境名`环境中的内容被正常的输出到文档中** (document环境中可输出到文档中,equation环境中可对行间公式进行编号,tabular环境中添加表格) ** |
 | `\` | `maketitle` |  |  | 将在导言区中定义的内容按照预定的格式展现出来 |
-| `\` | `tableofcontents` |  |  | **添加目录** |
-| `\` | `` | `{}` | `{}` |  |
-| `\` | `` | `{}` | `{}` |  |
+| `\` | `tableofcontents` |  |  | ** 添加目录 ** |
+| `\` | `includegraphics` | `{.jpg}` | `{图片名}` | ** 添加图片(同目录) ** |
+| `\` | `hline` |  |  | tabular环境中表示表格的横线 |
+<!-- | `\` | `` | `{}` | `{}` | `` | -->
 ### 控制序列(数学)
 | `\控制序列{·}` | 功能 |
 | :------------- | :------------- |
@@ -166,6 +186,6 @@ x,\quad x>0
 `%注释` (输出`%`需要使用`\%`转义)
 ## P.S.
 | 功能 | 实现 |
-| :------------- | :------------- |
+| :-------------: | :-------------: |
 | 换行 | `\\` |
-| 幂**(仅作用于之后的一个字符,使用`{连续字符}`)** | `^` |
+| 幂** (仅作用于之后的一个字符,使用`{连续字符}`) ** | `^` |
