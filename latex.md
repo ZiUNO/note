@@ -25,6 +25,20 @@ Hello, LateX!
 \date{时间}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\author}
+\chead{\date}
+\rhead{xxxxxxxxx}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage{setspace}
+\onehalfspacing
+\addtolength{\parskip}[.4em]
 \begin{document}
 \maketitle
 \tableofcontents
@@ -64,6 +78,15 @@ display with number
   -& -& -\\
   \hline
 \end{tabular}
+
+浮动体:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{test.jpg}
+\caption{图片标题}
+\end{figure}
+
 \end{document}
 ```
 ## 语法
@@ -73,13 +96,19 @@ display with number
 |:---:|:---:|:---:|:---:|:---:|
 | `\` | `documentclass` | `{article}` | `{参数}` | 调用名为`article`的文档类 |
 | `\` | `date` | `{time}` | `{时间}` | 设置时间 **时间:自定义 或 `\today`** |
-| `\` | `usepackage` | `{amsmath}` `{graphicx}`  | `{宏包名}` | 加载指定宏包(**amsmath用于插入数学公式,graphicx用于插入图片**)  |
-| `\` | `begin` +  `end` | `{document}` `{equation}` `{tabular}` | `{环境名}` | 在`环境名`环境中的内容被正常的输出到文档中(**document环境中可输出到文档中,equation环境中可对行间公式进行编号,tabular环境中添加表格**) |
+| `\` | `usepackage` | `{amsmath}` `{graphicx}` `{geometry}` `{fancyhdr}` `{setspace}`  | `{宏包名}` | 加载指定宏包(**amsmath用于插入数学公式,graphicx用于插入图片,geometry用于设置页边距,fancyhdr用于设置页眉页脚,setspace用于设置行、段间距**)  |
+| `\` | `begin` +  `end` | `{document}` `{equation}` `{tabular}` `{figure}[htbp]` | `{环境名}` | 在`环境名`环境中的内容被正常的输出到文档中(**document环境中可输出到文档中,equation环境中可对行间公式进行编号,tabular环境中添加表格,figure环境中添加浮动体(自动调整位置[h-here,t-top,b-bottom,p-float page])**) |
 | `\` | `maketitle` |  |  | 将在导言区中定义的内容按照预定的格式展现出来 |
 | `\` | `tableofcontents` |  |  | **添加目录** |
 | `\` | `includegraphics` | `{.jpg}` | `{图片名}` | **添加图片(同目录)** |
 | `\` | `hline` |  |  | tabular环境中表示表格的横线 |
-<!-- | `\` | `` | `{}` | `{}` | `` | -->
+| `\` | `centering` |  |   | **figure环境中插图居中** |
+| `\` | `caption` | `{name}` | `{插图标题}` | 添加插图名(自动编号) |
+| `\` | `label` | `{fig:photo}` | `{标签名}` | 为浮动体添加标签(应位于标题命令后) |
+| `\` | `geometry` | `{···}` | `{页边距设置}` | 用于设置**页边距和纸张大小** |
+| `\` | `pagestyle` | `{fancy}` | `{风格名}` | 页面应用指定风格 |
+| `\` | `onehalfspacing` |  |  | setspace包中**设置1.5倍行距** |
+| `\` | `addtolength` | `{\parskip}` | `{增加长度的位置}[.Nem]` | 增加段间隔N个em(N可正可负)|
 ### 控制序列(数学)
 | `\控制序列{·}` | 功能 |
 | :------------- | :------------- |
