@@ -36,9 +36,10 @@ Hello, LateX!
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headwidth}{\textwidth}
 \renewcommand{\footrulewidth}{0pt}
+
 \usepackage{setspace}
 \onehalfspacing
-\addtolength{\parskip}[.4em]
+
 \begin{document}
 \maketitle
 \tableofcontents
@@ -48,6 +49,7 @@ Hello, LateX!
 \subsubsection{亚亚章节}
 \paragraph{段落}
 段落内容
+\addtolength{\parskip}[.4em]
 \subparagraph{亚段落}
 亚段落内容
 
@@ -86,7 +88,6 @@ display with number
 \includegraphics{test.jpg}
 \caption{图片标题}
 \end{figure}
-
 \end{document}
 ```
 ## 语法
