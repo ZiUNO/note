@@ -1,6 +1,6 @@
 # database
-1. 
--
+1. week
+- week
   1. 全局数据库名(大写)
   - 账号(安装)
     - 超级管理员 sys
@@ -66,3 +66,38 @@
     1. 多行注释 `/*多行注释*/`
     - 单行注释 `--单行注释`
     - remark (放在一行一句的头部)
+- week
+  - 常用函数
+    - 单行函数: 字符，数值，日期，通用
+    - 多行函数
+  - 字符函数
+    1. 大小写控制函数 lower upper initcap(每个单词的首字母大写)
+    - 字符控制函数 concat(列连接) substr length instr lpad rpad trim(去掉前后指定字符，默认去掉空格)
+    - 数值 round(截取小数点后几位) trunc mod
+    - 日期 sysdate
+      - 日期的算术运算
+        - 日期
+          - months_between
+          - add_months
+          - next_day
+          - last_day
+          - extract
+        - 转换函数 fm 9 $ L
+          - to_char(hiredate, 'YYYY-MM-DD')
+          - to_char(sysdate,'yyyy-mm-dd hh12:mi:ss am')
+          - to_char(sysdate,'fmyyyy-mm-dd hh12:mi:ss am') 去掉前导0
+          - to_char(sal,, '9999-99')
+        - to_data
+        - to_number
+      - 通用
+        - nvl
+        - nvl2
+        - decode
+          - select ename, decode(job, 'CLERK', '办事员',
+                                      'SALESMAN', '销售人员',
+                                      '其他')
+        - case when then end
+# P.S.
+  - 连接不上主机名 修改其中的host为本机名
+    - tnnsames.ora
+    - listener.ora

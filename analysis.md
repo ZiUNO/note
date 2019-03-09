@@ -1,5 +1,4 @@
 # HTML
-
 - 注释 `<!-- 注释 -->`
 - 特殊符号
   - 空格 `&nbsp;`
@@ -50,7 +49,8 @@
     - left.html
     - index.html
   - iframe
-- css
+
+# CSS
   <head>
   <style type="text/css">
     选择器{
@@ -66,3 +66,82 @@
       - #id{}
       - `<div id="id"`
   - 偏移实现截图
+  - li
+    - list-style:
+      - none;
+      - disc;
+      - circle;
+    - float:
+      - left 向左水平
+  - 盒模型 top->right->bottom->left
+    - margin
+    - padding
+    - border
+
+# JS
+  - `<script type="text/javascript"></script>`
+  - `<script src=".js" language="javascript></script>"`
+  - `document.write("");`
+  - `var`
+  - `<input name="btn" type="button" value="" onclick=""`
+  - typeof
+    - undefined
+    - string ""
+    - boolean
+    - number
+    - object
+  - if else switch continute break
+  - `/* */` `//`
+  - `alert("")`
+  - `prompt()`
+  - 函数
+    - 系统函数
+      - parseInt("")
+      - parseFloat("")
+      - isNaN()
+    - 自定义函数
+      ```
+      function 函数名(形参名){
+
+      }
+      调用 onclick="函数名(实参名)"
+      ```
+    - 常用属性
+      - screen
+    - 常用方法
+      - prompt
+      - alert
+      - confirm
+        - 返回boolean
+      - close
+      - open
+      - setTimeout
+    - 常用事件
+      - onload
+      - onmouseover
+      - onclick
+      - onkeydown
+    - 匿名函数
+      - (function(){})
+    - Date对象
+      - getHours()
+      - getMinutes()
+      - getSeconds()
+    - setTimeout("调用的函数","指定时间后")
+    - setInterval("调用的函数","")
+    - 时钟
+      - getFullYear()
+      - getMonth() + 1
+      - getDate()
+      - getHours()
+      - getDay()
+    - document
+      - getElementById()
+      - getElementByName()
+      - getElementByTagName()
+    - visibility
+      - hidden
+    - display
+      - none 不显示
+      - block 显示
+    - tab切换
