@@ -21,7 +21,7 @@
     - 重置按钮 reset
     - 按钮 button image
     - 文件 file
-    - 隐藏域 hiddden
+    - 隐藏域 hidden
   - `disabled="disabled"`
 - 语法
     - 表单语法
@@ -145,3 +145,82 @@
       - none 不显示
       - block 显示
     - tab切换
+  - DOM
+    - getElementsById
+    - getElementsByName
+    - getElementsByTagName
+    - setAttribute
+  - 创建和增加节点
+    - parent ~~~ child
+      - parentNode
+    - createElement()
+    - appendChild()
+    - insertBefore()
+    - cloneNode()
+  - &yen 人民币
+  - 滚动条
+    - scrollTop
+    - scollLeft
+
+| signal | type |
+| :------------- | :------------- |
+| element | 标签 |
+| . | class |
+| # | id |
+
+# jQuery
+- $(document).ready(function(){});
+  - 简化写法
+    - $(function();)
+  - 工厂函数
+    - $()
+  - css("属性", "属性值")
+  - addClass()
+  - next()
+- jQuery对象
+- 并集选择器
+  - $("div,p,...,title")
+- 交集选择器
+  - $("h2.title") class为title的h2
+- 类选择器
+  - $(".title")
+- `$("*")`全局选择器
+- 后代选择器
+  - $("#menu span")
+- 子选择器
+  - $("#menu>span")
+- 相邻选择器
+  - $("h2+dl")
+- 同辈选择器
+  - $("h2~dl") h2之后的同辈的dl
+- 属性选择器
+  - [attribute]
+    - #("[href]")
+  - [attribute=value]
+  - [attribute!=value]
+  - [attribute^=value] 开头value的
+  - [attribute$=value] 结尾value的
+  - [attribute*=value] 含有value的
+- 过滤选择器
+  - :
+    - :first
+    - :last
+    - :even 选取li索引偶数的
+    - :odd 选区索引为奇数的
+    - :eq(1)索引等于1
+    - :gt(1)索引大于1
+    - :lt(1)
+    - :not(selector)
+    - :header
+    - :focus
+    - :visible
+    - :hidden
+  - `\\`转义
+- 网页中的事件
+  - bind()
+  - bind({},{})
+  - hover()
+  - toggle()
+
+# 微信小程序
+- 
